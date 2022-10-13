@@ -22,7 +22,7 @@ body{
   height: 64px;
   font: normal normal 700 1em/4em Arial,sans-serif;
   overflow: hidden;
-  width: 200px;
+  width: 400px;
   background-color: #3b5998;
   border-radius: 20px;
 }
@@ -44,7 +44,16 @@ body{
   margin-top: -4em;
 }
 .home{
+padding-bottom: 50px;
+}
+.container{
   display: flex;
-  padding-top: 300px;
+  flex-direction: column;
   justify-content: center;
+  height: max-content;
+  width: max-content;
+}
+.bb{
+ margin-left: 60px;
+  width: 50%;
 }

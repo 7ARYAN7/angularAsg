@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-my-world',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-world.component.css']
 })
 export class MyWorldComponent implements OnInit {
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  isActive = true;
+  data: any;
+
+  onSave() {
+
+    this.data = "You clicked an event Binder";
+  }
+
+  values = '';
+  name: String = '';
+  onKeyUp(event : KeyboardEvent) {
+      this.values += (event.target as HTMLInputElement).value;
+    console.log(this.values)
+  }
 }

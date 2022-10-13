@@ -1,14 +1,23 @@
-
-
-
+<div class="container">
 <div class="home">
+  <h1 *ngIf="data==null else elseBlock">Something</h1>
+  <ng-template #elseBlock><h1  [innerHTML] = "data"></h1></ng-template>
+  <p>This is one way binding</p>
+  <input name="name" (keyup)="onKeyUp($event)"/>
+  <p>{{values}}</p>
+  <br>
+  <p>This is two way binding</p>
+  <input [(ngModel)]="name">
+  <p>{{name}}</p>
+  <button class="bb" (click)="onSave()">save</button>
+  </div>
+</div>
 <div class="blue-btn">
-  <a class="first-link" href="">
+  <a class="first-link" [class.active]="isActive" [style.background-color]="isActive ? 'blue':'yellow'" href="" ><!--this is class binding and style binding-->
     Get Started
   </a>
   <a href="body">
     Learn More
   </a>
-</div>
 </div>
 

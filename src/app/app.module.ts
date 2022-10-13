@@ -1,13 +1,15 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule, routingComponents } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './frontPage/navbar/navbar.component';
-import { BodyComponent } from './frontPage/body/body.component';
-import { HomeComponent } from './frontPage/home/home.component';
-import { AboutUsComponent } from './frontPage/about-us/about-us.component';
-import { MyWorldComponent } from './frontPage/my-world/my-world.component';
+import {AppRoutingModule, routingComponents} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {NavbarComponent} from './frontPage/navbar/navbar.component';
+import {BodyComponent} from './frontPage/body/body.component';
+import {HomeComponent} from './frontPage/home/home.component';
+import {AboutUsComponent} from './frontPage/about-us/about-us.component';
+import {MyWorldComponent} from './frontPage/my-world/my-world.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {CarDetailsComponent} from './frontPage/car-details/car-details.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,17 @@ import { MyWorldComponent } from './frontPage/my-world/my-world.component';
     BodyComponent,
     HomeComponent,
     AboutUsComponent,
-    MyWorldComponent
+    MyWorldComponent,
+    CarDetailsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
