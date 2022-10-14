@@ -10,6 +10,7 @@ import {AboutUsComponent} from './frontPage/about-us/about-us.component';
 import {MyWorldComponent} from './frontPage/my-world/my-world.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CarDetailsComponent} from './frontPage/car-details/car-details.component';
+import { WelcomeComponent } from './frontPage/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {CarDetailsComponent} from './frontPage/car-details/car-details.component
     AboutUsComponent,
     MyWorldComponent,
     CarDetailsComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,

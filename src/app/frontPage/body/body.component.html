@@ -11,13 +11,19 @@
   </div>
   <div id="right">
     <h1 id="login">LogIn</h1><br>
-    <form>
-      <input type="email" id="email" class="client-info">
-      <label for="email">Email</label>
-      <input type="password" id="password" class="client-info">
-      <label for="password">Password</label>
+    <form [formGroup]="loginForm" #login="ngForm" (ngSubmit)="something({data : login.value})">
+      <div class="form-group " style="padding-bottom: 20px">
+        <input style="padding-left: 20px" type="name" id="name" name="name" class="form-control" formControlName="name" placeholder="Enter Name">
+      </div>
+      <div class="form-group " style="padding-bottom: 20px">
+        <input style="padding-left: 20px" type="email" id="email" name="email" class="form-control" formControlName="email" placeholder="Enter Email">
+      </div>
+      <div class="form-group">
+      <input style="padding-left: 20px" type="password" id="password" name="password" class="form-control" formControlName="password" placeholder="Password">
+      </div>
       <input type="submit" id="submit" class="client-info" value="Submit">
-    </form>
+     </form>
+
     <button class="social" id="facebook">connect with facebook</button>
     <button class="social" id="google">connect with google</button>
   </div>
